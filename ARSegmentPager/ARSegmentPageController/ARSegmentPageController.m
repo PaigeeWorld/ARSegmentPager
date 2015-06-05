@@ -106,7 +106,9 @@ const void* _ARSEGMENTPAGE_CURRNTPAGE_SCROLLVIEWOFFSET = &_ARSEGMENTPAGE_CURRNTP
         self.view.preservesSuperviewLayoutMargins = YES;   
     }
     self.extendedLayoutIncludesOpaqueBars = NO;
-    self.headerView = [self customHeaderView];
+    if (self.headerView == nil) {
+        self.headerView = [self customHeaderView];   
+    }
     self.headerView.clipsToBounds = YES;
     [self.view addSubview:self.headerView];
     
