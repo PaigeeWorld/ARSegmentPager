@@ -10,6 +10,7 @@
 #import "ARSegmentControllerDelegate.h"
 #import "ARSegmentPageHeader.h"
 #import "ARSegmentPageControllerHeaderProtocol.h"
+#import "ARSegmentView.h"
 
 @interface ARSegmentPageController : UIViewController
 
@@ -21,6 +22,8 @@
 @property (nonatomic, weak, readonly) UIViewController<ARSegmentControllerDelegate> *currentDisplayController;
 
 @property (nonatomic, strong, readonly) UIView<ARSegmentPageControllerHeaderProtocol> *headerView;
+@property (nonatomic, strong) ARSegmentView *segmentView;
+
 
 -(instancetype)initWithControllers:(UIViewController<ARSegmentControllerDelegate> *)controller,... NS_REQUIRES_NIL_TERMINATION;
 
