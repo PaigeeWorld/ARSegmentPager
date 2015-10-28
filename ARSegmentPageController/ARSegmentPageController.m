@@ -7,14 +7,12 @@
 //
 
 #import "ARSegmentPageController.h"
-#import "ARSegmentView.h"
 
 const void* _ARSEGMENTPAGE_CURRNTPAGE_SCROLLVIEWOFFSET = &_ARSEGMENTPAGE_CURRNTPAGE_SCROLLVIEWOFFSET;
 
 @interface ARSegmentPageController ()
 
 @property (nonatomic, strong) UIView<ARSegmentPageControllerHeaderProtocol> *headerView;
-@property (nonatomic, strong) ARSegmentView *segmentView;
 @property (nonatomic, strong) NSMutableArray *controllers;
 @property (nonatomic, assign) CGFloat segmentToInset;
 @property (nonatomic, weak) UIViewController<ARSegmentControllerDelegate> *currentDisplayController;
