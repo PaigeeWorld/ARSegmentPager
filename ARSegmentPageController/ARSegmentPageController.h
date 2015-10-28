@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ARSegmentControllerDelegate.h"
 #import "ARSegmentPageHeader.h"
+#import "ARSegmentView.h"
 #import "ARSegmentPageControllerHeaderProtocol.h"
 
 @interface ARSegmentPageController : UIViewController
@@ -17,6 +18,7 @@
 @property (nonatomic, assign) CGFloat headerHeight;
 @property (nonatomic, assign) CGFloat segmentMiniTopInset;
 @property (nonatomic, assign, readonly) CGFloat segmentToInset;
+@property (nonatomic, strong) ARSegmentView *segmentView;
 
 @property (nonatomic, weak, readonly) UIViewController<ARSegmentControllerDelegate> *currentDisplayController;
 
